@@ -31,16 +31,19 @@ La configuration `base: './'` et les liens de navigation par ancres permettent d
 
 ## Personnalisation
 
-- `src/projects.ts` : projets, catégories, descriptions, images et liens.
+- `src/catalog.ts` : les 11 projets du dépôt source et l’ajout Cartographie de Mars.
 - `src/main.ts` : présentation, formation, compétences, adresse e-mail et réseaux sociaux.
 - `src/portfolio.css` : styles, couleurs, typographie et adaptations mobiles.
-- `public/images/` : images locales des projets.
+- `public/images/` : images locales des projets, reprises de `portfolio-main/src/assets/images/projects/`.
+- `public/files/` : CV français et anglais fournis avec le dépôt source.
 - `index.html` : titre et métadonnées pour les moteurs de recherche et le partage.
 
 Les projets proposent des filtres par domaine et une fiche détaillée accessible au clavier. Le menu s’adapte aux petits écrans ; les animations respectent la préférence de réduction des mouvements.
 
 ## Sources et médias
 
-Les informations reprises couvrent le parcours jusqu’en 2023 et sept projets : GEMINI, MiniGIS, station météo, GEODEV, OpenGL, billetterie et géostatistiques. Aucune expérience professionnelle plus récente n’a été supposée. Les visuels proviennent du portfolio fourni ; les GIF ont été remplacés par des aperçus WebP fixes pour réduire le poids. Les fiches renvoient aux pages originales et aux dépôts lorsqu’ils sont identifiés.
+Le catalogue présente 12 projets, dont **GDAI**, une application interne de gestion du matériel. Les informations publiées sur ce projet restent générales ; aucun lien vers ses ressources internes n’est fourni.
 
-Le CV reste un lien vers le site original, et l’adresse e-mail est celle qui y figure. Vérifier leur actualité avant publication. Les polices Manrope et DM Sans sont chargées depuis Google Fonts avec une police de secours ; les icônes Lucide sont incluses dans le build. Aucun traceur, formulaire serveur ni collecte de données n’est ajouté.
+Les visuels des projets et les CV français et anglais sont stockés dans `public/` pour être servis localement par GitHub Pages. Le GIF source de billetterie (environ 88 Mo) est représenté par une image WebP extraite de sa séquence de réservation ; les GIF MiniGIS et OpenGL restent animés.
+
+Les CV sont disponibles dans `public/files/cv-fr.pdf` et `public/files/cv-en.pdf`, consultables dans la visionneuse intégrée ou téléchargeables. L’adresse de contact est `gaetan.tiazara@outlook.fr`. Les polices Manrope et DM Sans sont chargées depuis Google Fonts avec une police de secours ; les icônes Lucide sont incluses dans le build. Aucun traceur, formulaire serveur ni collecte de données n’est ajouté.
