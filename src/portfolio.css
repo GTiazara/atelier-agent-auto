@@ -240,63 +240,77 @@ h3 {
     display: flex;
     justify-content: space-between;
     gap: 40px;
-    align-items: flex-end;
+    align-items: flex-start;
     margin-top: 23px;
 }
 
 .intro-role {
     font-family: "Manrope", sans-serif;
-    font-size: 23px;
+    font-size: 21px;
     line-height: 1.5;
-    font-weight: 500;
+    font-weight: 650;
 }
 
 .intro-description {
     font-size: 14px;
-    line-height: 1.9;
+    line-height: 1.8;
     color: var(--muted);
-    margin-top: 18px;
+    margin-top: 12px;
+    max-width: 620px;
+}
+
+.intro-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 23px;
+}
+
+.intro-actions .button-primary {
+    border-radius: 3px;
+}
+
+.intro-actions .button-primary svg {
+    width: 15px;
+    height: 15px;
+}
+
+.intro-actions .text-link {
+    font-size: 11px;
 }
 
 .intro-aside {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    gap: 13px;
-    font-size: 11px;
-    color: var(--muted);
-    padding-bottom: 4px;
+    align-items: flex-start;
+    gap: 20px;
+    width: 275px;
+    flex-shrink: 0;
+    border-left: 1px solid var(--line);
+    padding: 2px 0 2px 24px;
 }
 
-.intro-aside>span {
-    display: flex;
-    align-items: center;
-    gap: 7px;
+.intro-fact {
+    display: grid;
+    gap: 5px;
 }
 
-.intro-aside svg {
-    width: 14px;
-    height: 14px;
-}
-
-.intro-aside .coordinate {
-    font-family: monospace;
-    font-size: 12px;
+.intro-fact>span {
     color: var(--green);
+    font-size: 9px;
+    font-weight: 650;
 }
 
-.intro-aside a {
-    display: flex;
-    gap: 24px;
-    align-items: center;
-    color: var(--ink);
-    margin-top: 20px;
-    font-weight: 600;
+.intro-fact strong {
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    font-weight: 650;
 }
 
-.intro-aside a svg {
-    width: 17px;
-    height: 17px;
+.intro-fact small {
+    color: var(--muted);
+    font-size: 10px;
 }
 
 .intro-foot {
@@ -478,6 +492,18 @@ h3 {
     background: #dce8d5;
 }
 
+.visual-gdai {
+    background: #e1e8e8;
+}
+
+.visual-stage {
+    background: #dce8e4;
+}
+
+.visual-research {
+    background: #e4e6df;
+}
+
 .visual-minigis {
     background: #dce4ed;
 }
@@ -497,6 +523,14 @@ h3 {
 
 .visual-opengl {
     background: #d7e6e4;
+}
+
+.visual-python {
+    background: #e6e5d7;
+}
+
+.visual-gnss {
+    background: #dce5e7;
 }
 
 .visual-ticketing {
@@ -685,6 +719,123 @@ h3 {
     line-height: 1.8;
     color: var(--muted);
     margin-top: 13px;
+}
+
+.timeline-detail {
+    margin-top: 17px;
+    padding-top: 13px;
+    border-top: 1px solid var(--line);
+}
+
+.timeline-detail summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    list-style: none;
+    cursor: pointer;
+    font-size: 11px;
+    line-height: 1.6;
+    font-weight: 650;
+}
+
+.timeline-detail summary::-webkit-details-marker {
+    display: none;
+}
+
+.timeline-detail summary::after {
+    content: "+";
+    color: var(--green);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.timeline-detail[open] summary::after {
+    content: "−";
+}
+
+.timeline-competencies {
+    display: grid;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.timeline-competency h4 {
+    color: var(--green);
+    font-size: 10px;
+    line-height: 1.6;
+    font-weight: 700;
+}
+
+.timeline-competency h5 {
+    margin-top: 8px;
+    font-size: 10px;
+}
+
+.timeline-competency p {
+    margin-top: 5px;
+    font-size: 10px;
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+.timeline-competency ul {
+    display: grid;
+    gap: 4px;
+    list-style: none;
+    margin: 5px 0 0;
+    padding: 0;
+}
+
+.timeline-competency li {
+    position: relative;
+    padding-left: 11px;
+    color: var(--muted);
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+.timeline-competency li::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--green);
+}
+
+.timeline-detail ul {
+    display: grid;
+    gap: 9px;
+    list-style: none;
+    margin: 14px 0 0;
+    padding: 0;
+}
+
+.timeline-detail li {
+    position: relative;
+    padding-left: 13px;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.75;
+}
+
+.timeline-detail li::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--green);
+}
+
+.timeline-detail strong {
+    color: var(--ink);
+    font-weight: 600;
 }
 
 .timeline-tag {
@@ -914,9 +1065,116 @@ h3 {
     overscroll-behavior: contain;
 }
 
+.cv-dialog {
+    position: fixed;
+    width: min(1080px, calc(100% - 32px));
+    height: min(900px, calc(100dvh - 32px));
+    max-height: 94dvh;
+    padding: 0;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    color: var(--ink);
+    background: #fbfcfa;
+    overscroll-behavior: contain;
+}
+
+.cv-dialog[open] {
+    display: flex;
+    flex-direction: column;
+}
+
 .project-dialog::backdrop {
     background: #12261dcc;
     backdrop-filter: blur(5px);
+}
+
+.cv-dialog::backdrop {
+    background: #12261dcc;
+    backdrop-filter: blur(5px);
+}
+
+.cv-viewer-header {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--line);
+}
+
+.cv-viewer-header .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--green);
+}
+
+.cv-viewer-header .eyebrow svg {
+    width: 13px;
+    height: 13px;
+}
+
+.cv-viewer-header h2 {
+    margin-top: 2px;
+    font-size: 19px;
+}
+
+.cv-viewer-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cv-languages {
+    display: flex;
+    padding: 3px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: #f0f3ee;
+}
+
+.cv-language {
+    min-height: 32px;
+    padding: 0 11px;
+    border-radius: 3px;
+    background: transparent;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.cv-language.selected {
+    background: #fff;
+    color: var(--ink);
+    box-shadow: 0 1px 3px #1c2e241c;
+}
+
+.cv-viewer-actions .icon-button {
+    border: 1px solid var(--line);
+}
+
+.cv-dialog iframe {
+    width: 100%;
+    min-height: 0;
+    flex: 1;
+    border: 0;
+    background: #e9ece8;
+}
+
+.cv-fallback {
+    margin: 0;
+    padding: 10px 16px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 11px;
+    text-align: center;
+}
+
+.cv-fallback a {
+    color: var(--green);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 .dialog-close {
@@ -949,11 +1207,57 @@ h3 {
     margin-top: 10px;
 }
 
-.dialog-body>p {
+.dialog-body>p,
+.dialog-description p,
+.dialog-content p {
     font-size: 14px;
     line-height: 1.9;
     color: var(--muted);
     margin-top: 15px;
+}
+
+.dialog-work {
+    font-weight: 600;
+}
+
+.dialog-content {
+    margin-top: 25px;
+}
+
+.dialog-content h3 {
+    font-size: 15px;
+    margin-top: 24px;
+}
+
+.dialog-content a {
+    color: var(--green);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.dialog-body .project-tags {
+    margin-top: 20px;
+}
+
+.project-testimonial {
+    margin: 26px 0 0;
+    padding: 18px 20px;
+    border-left: 2px solid var(--green);
+    background: #f0f3ee;
+}
+
+.project-testimonial p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.project-testimonial cite {
+    display: block;
+    margin-top: 12px;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
 }
 
 .dialog-links {
@@ -1424,6 +1728,36 @@ h3 {
 
     .dialog-links .text-link {
         font-size: 11px;
+    }
+
+    .cv-dialog {
+        width: calc(100% - 16px);
+        height: calc(100dvh - 16px);
+        max-height: none;
+    }
+
+    .cv-viewer-header {
+        min-height: 68px;
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .cv-viewer-header h2 {
+        font-size: 16px;
+    }
+
+    .cv-viewer-actions {
+        gap: 5px;
+    }
+
+    .cv-language {
+        padding-inline: 8px;
+        font-size: 10px;
+    }
+
+    .cv-viewer-actions .icon-button {
+        width: 34px;
+        height: 34px;
     }
 }
 
